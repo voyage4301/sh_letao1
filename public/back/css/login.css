@@ -1,0 +1,10 @@
+@charset "utf-8";
+.container > div {
+  margin-top: 150px;
+}
+.container > div .panel .panel-heading {
+  color: #fff;
+  background-color: #337AB7;
+  font-size: 20px;
+  line-height: 40px;
+}
