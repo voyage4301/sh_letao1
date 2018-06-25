@@ -1,6 +1,6 @@
 $(function () {
 
-  ; //登陆验证
+  ; //表单验证
   (function () {
     $('#form').bootstrapValidator({
       fields: {
@@ -29,6 +29,23 @@ $(function () {
           }
         }
       }
+    })
+  })();
+
+  ; //登录后台验证
+  (function () {
+    $("[type='submit']").on('click', function (e) {
+      e.preventDefault()
+      $.ajax({
+        type: 'post',
+        url: '/employee/employeeLogin',
+        data: '',
+        dataType: '',
+        success: function (info) {
+          console.log('登录成功');
+          
+        }
+      })
     })
   })();
 
