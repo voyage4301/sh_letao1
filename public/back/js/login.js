@@ -3,6 +3,12 @@ $(function () {
   ; //表单验证
   (function () {
     $('#form').bootstrapValidator({
+      excluded: [],
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
       fields: {
         username: {
           validators: {
@@ -34,19 +40,27 @@ $(function () {
 
   ; //登录后台验证
   (function () {
-    $("[type='submit']").on('click', function (e) {
+    $('#form').on('success.form.bv', function (e) {
       e.preventDefault()
       $.ajax({
         type: 'post',
         url: '/employee/employeeLogin',
-        data: '',
-        dataType: '',
+        data: $('#form').serialize(),
+        dataType: 'json',
         success: function (info) {
-          console.log('登录成功');
-          
+          info.success && (location.href = './index.html')
         }
       })
     })
   })();
+
+  ; //表单重置
+  (function () {
+    $("[type='reset']").on('click', function () {
+      $('#form').data('bootstrapValidator').resetForm()
+    })
+  })();
+
+
 
 })
