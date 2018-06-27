@@ -15,6 +15,14 @@ a:active {
 .color-red {
   color: #A94442;
 }
+.pagination > li {
+  cursor: pointer;
+}
+table thead tr th,
+table tbody tr td {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
 /* 侧边栏 */
 .lt_aside {
   width: 180px;
