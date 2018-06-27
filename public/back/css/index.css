@@ -102,3 +102,11 @@ a:active {
   text-align: center;
   color: #fff;
 }
+.lt_main .main_content .graph_bar {
+  width: 40%;
+  height: 400px;
+}
+.lt_main .main_content .graph_pie {
+  width: 40%;
+  height: 400px;
+}
