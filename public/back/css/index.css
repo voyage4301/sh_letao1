@@ -1,0 +1,88 @@
+@charset 'utf-8';
+html,
+body {
+  height: 100%;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.mt20 {
+  margin-top: 20px;
+}
+/* 侧边栏 */
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.lt_aside .aside_brand {
+  width: 100%;
+  height: 50px;
+  background-color: #367FA9;
+}
+.lt_aside .aside_brand a {
+  line-height: 50px;
+  font-size: 24px;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+.lt_aside .aside_user {
+  width: 100%;
+  height: 150px;
+}
+.lt_aside .aside_user img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.lt_aside .aside_user p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+.lt_aside .aside_nav ul {
+  margin: 0;
+  padding: 0;
+}
+.lt_aside .aside_nav ul li a {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  display: block;
+  border-left: 3px solid transparent;
+  color: #ccc;
+}
+.lt_aside .aside_nav ul li a i {
+  margin: 0 5px;
+}
+.lt_aside .aside_nav ul .second_nav > ul > li > a {
+  padding-left: 50px;
+}
+/* 主体部分 */
+.lt_main {
+  padding-left: 180px;
+}
+.lt_main .main_top {
+  height: 50px;
+  background-color: #3C8DBC;
+}
+.lt_main .main_top a {
+  width: 50px;
+  height: 50px;
+  display: block;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
