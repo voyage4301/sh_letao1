@@ -12,6 +12,9 @@ a:active {
 .mt20 {
   margin-top: 20px;
 }
+.color-red {
+  color: #A94442;
+}
 /* 侧边栏 */
 .lt_aside {
   width: 180px;
@@ -20,6 +23,10 @@ a:active {
   position: fixed;
   top: 0;
   left: 0;
+  transition: all 1s;
+}
+.lt_aside.isOrHide {
+  left: -180px;
 }
 .lt_aside .aside_brand {
   width: 100%;
@@ -63,6 +70,11 @@ a:active {
   border-left: 3px solid transparent;
   color: #ccc;
 }
+.lt_aside .aside_nav ul li a.current {
+  color: #fff;
+  border-left: 3px solid #006699;
+  background-color: #1d1f21;
+}
 .lt_aside .aside_nav ul li a i {
   margin: 0 5px;
 }
@@ -72,6 +84,10 @@ a:active {
 /* 主体部分 */
 .lt_main {
   padding-left: 180px;
+  transition: all 1s;
+}
+.lt_main.isOrHide {
+  padding: 0;
 }
 .lt_main .main_top {
   height: 50px;

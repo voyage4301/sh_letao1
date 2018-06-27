@@ -19,6 +19,9 @@ $(function () {
               min: 2,
               max: 6,
               message: '用户名长度为2-6位!'
+            },
+            callback: {
+              message: '用户名不存在!'
             }
           }
         },
@@ -31,6 +34,9 @@ $(function () {
               min: 6,
               max: 12,
               message: '密码长度为6-12位!'
+            },
+            callback: {
+              message: '密码错误!'
             }
           }
         }
@@ -49,6 +55,14 @@ $(function () {
         dataType: 'json',
         success: function (info) {
           info.success && (location.href = './index.html')
+          switch (info.error) {
+            case 1000:
+              $('#form').data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback')
+              break;
+            case 1001:
+              $('#form').data('bootstrapValidator').updateStatus('password', 'INVALID', 'callback')
+              break;
+          }
         }
       })
     })
