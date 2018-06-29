@@ -1,0 +1,44 @@
+/* 主体 */
+.lt_body .nav {
+  padding: 10px;
+}
+.lt_body .nav ul li {
+  width: 33.3%;
+  float: left;
+}
+.lt_body .nav ul li a {
+  display: block;
+  text-align: center;
+}
+.lt_body .nav ul li a img {
+  display: block;
+  width: 100%;
+}
+.lt_body .product {
+  padding: 10px;
+}
+.lt_body .product ul li {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  margin-bottom: 10px;
+}
+.lt_body .product ul li:nth-child(odd) {
+  margin-right: 4%;
+}
+.lt_body .product ul li a {
+  display: block;
+  text-align: center;
+}
+.lt_body .product ul li a img {
+  display: block;
+  width: 100%;
+}
+.lt_body .product ul li a p span:first-child {
+  margin-right: 5px;
+  color: red;
+}
+.lt_body .product ul li a p span:last-child {
+  text-decoration: line-through;
+}
