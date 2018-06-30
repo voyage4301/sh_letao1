@@ -12,11 +12,27 @@ $(function () {
     })
   }
 
-  renderSecond()
+  renderSecond() //初始渲染
 
-  // 2.导航点击事件
+  // 2.1导航点击事件()
   $('#secondNav').on('click', 'a', function () {
     $(this).parent().addClass('current').siblings().removeClass('current')
-    console.log($(this).data('id'));
+    renderItems($(this).data('id'))
   })
+
+  //2.2渲染二级分类下的商品
+  function renderItems(id) {
+    $.ajax({
+      type: 'get',
+      url: '/category/querySecondCategory',
+      data: {
+        id: id || 1
+      },
+      dataType: 'json',
+      success: function (info) {
+        $('#itemsList').html(template('itemsTmp', info))
+      }
+    })
+  }
+  renderItems() //初始渲染
 })

@@ -94,13 +94,25 @@
   <script src="./js/product.js"></script>
 
 
+  <!-- 导航模板 -->
   <script type="text/html" id="navList">
     {{ each rows v i }}
     <li>
       <a href="javascript:;" data-id="{{ v.id }}">{{ v.categoryName }}</a>
     </li>
     {{ /each }}
+  </script>
 
+  <!-- 详细商品模板 -->
+  <script type="text/html" id="itemsTmp">
+    {{ each rows v i }}
+    <li>
+      <a href="javascript:;">
+        <img src="{{ v.brandLogo }}" alt="">
+        <p>{{ v.brandName }}</p>
+      </a>
+    </li>
+    {{ /each }}
   </script>
 
 </body>
