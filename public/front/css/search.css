@@ -1,0 +1,46 @@
+.lt_header .mui-icon-back {
+  font-size: 24px !important;
+}
+.lt_body .search_input {
+  padding: 10px;
+  position: relative;
+}
+.lt_body .search_input #search_input {
+  height: 34px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+  border: 1px solid #007aff;
+}
+.lt_body .search_input .search_btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.lt_body .history_title {
+  padding: 10px;
+  font-size: 14px;
+  color: #8f8f94;
+}
+.lt_body .history_title a {
+  color: #8f8f94;
+}
+.lt_body .history_title a i {
+  font-size: 20px;
+}
+.lt_body .history_content {
+  padding: 10px;
+}
+.lt_body .history_content ul {
+  border: 1px dashed #8f8f94;
+}
+.lt_body .history_content ul li {
+  height: 50px;
+  width: 100%;
+}
+.lt_body .history_content ul li a {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #8f8f94;
+}
